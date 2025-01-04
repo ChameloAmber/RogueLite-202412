@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Skill",
+  "%Name":"SkillBase",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Skill",
+  "name":"SkillBase",
   "parent":{
     "name":"Class",
     "path":"folders/Scripts/Class.yy",

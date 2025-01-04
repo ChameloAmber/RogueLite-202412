@@ -2,69 +2,53 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_init_variables(){
 	global.library = ds_map_create()
-	ds_map_add(global.library, "classic_auto_attack", new Skill("classic_auto_attack", "activate", 2))
+	ds_map_add(global.library, "classic_auto_attack", new SkillBase("classic_auto_attack", "activate", 5, 0))
+	
+	global.skills = ds_map_create()
+	ds_map_add(global.skills, "autoAttack", new SkillSlot())
+	ds_map_add(global.skills, "player1", new SkillSlot())
+	ds_map_add(global.skills, "player2", new SkillSlot())
+	ds_map_add(global.skills, "player3", new SkillSlot())
+	ds_map_add(global.skills, "wild1", new SkillSlot())
+	ds_map_add(global.skills, "wild2", new SkillSlot())
+	ds_map_add(global.skills, "wild3", new SkillSlot())
+	
+	scr_skill_insert("classic_auto_attack", "autoAttack")
+	scr_skill_insert("classic_auto_attack", "player1")
 	
 	global.player = {
 		hp: 100,
-		skill: {
-			autoAttack: global.library[? "classic_auto_attack"],
-			player1: -1,
-			player2: -1,
-			player3: -1,
-			wild1: -1,
-			wild2: -1,
-			wild3: -1,
-		}
+		healing: 0.0,
+		attack: 5,
+		defense: 0,
+		dodge: 0.0,
+	}
+	
+	global.variable = {
+		hp: 100,
+		xp: 0,
+		level: 1,
 	}
 	
 	global.base = {
-		hp: 100,
-		attack: 5,
-		skill: {
-			autoAttack: global.library[? "classic_auto_attack"].cooldown,
-			player1: 1,
-			player2: 1,
-			player3: 1,
-			wild1: 1,
-			wild2: 1,
-			wild3: 1,
-		}
+		hp: global.player.hp,
+		attack: global.player.attack,
+		defense: global.player.defense,
+		dodge: global.player.dodge,
 	}
 	
 	global.modifier = {
+		hp: 0,
 		attack: 0,
-		skill: {
-			autoAttack: 0,
-			player1: 0,
-			player2: 0,
-			player3: 0,
-			wild1: 0,
-			wild2: 0,
-			wild3: 0,
-		}
+		defense: 0,
+		dodge: 0.0,
 	}
 	
 	global.multiplier = {
+		hp: 1.0,
 		attack: 1.0,
-		skill: {
-			autoAttack: 1.0,
-			player1: 1.0,
-			player2: 1.0,
-			player3: 1.0,
-			wild1: 1.0,
-			wild2: 1.0,
-			wild3: 1.0,
-		}
-	}
-	
-	global.timer = {
-		autoAttack: 0,
-		player1: 0,
-		player2: 0,
-		player3: 0,
-		wild1: 0,
-		wild2: 0,
-		wild3: 0,
+		defense: 1.0,
+		dodge: 1.0,
 	}
 	
 	global.damageCounter = 0
