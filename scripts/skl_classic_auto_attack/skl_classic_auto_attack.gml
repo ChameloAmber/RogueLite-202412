@@ -8,8 +8,9 @@ function skl_classic_auto_attack_on_fight_start(){
 	
 }
 
-function skl_classic_auto_attack_activate(){
+function skl_classic_auto_attack_activate(_slot){
 	global.damageCounter += 5
+	global.skills[? _slot].timer.current = 0
 }
 
 function skl_classic_auto_attack_toggle_on(){

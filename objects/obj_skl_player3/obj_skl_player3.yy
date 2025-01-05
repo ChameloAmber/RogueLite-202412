@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_skr_autoAttack",
+  "%Name":"obj_skl_player3",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_skr_autoAttack",
+  "name":"obj_skl_player3",
   "overriddenProperties":[],
   "parent":{
     "name":"Skill Slot",

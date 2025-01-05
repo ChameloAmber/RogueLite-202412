@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"skl_classic_auto_attack",
   "parent":{
-    "name":"Skills",
-    "path":"folders/Scripts/Skills.yy",
+    "name":"classic_auto_attack",
+    "path":"folders/Skills/classic_auto_attack.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

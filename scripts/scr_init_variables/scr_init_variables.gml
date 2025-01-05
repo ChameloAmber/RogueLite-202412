@@ -3,6 +3,8 @@
 function scr_init_variables(){
 	global.library = ds_map_create()
 	ds_map_add(global.library, "classic_auto_attack", new SkillBase("classic_auto_attack", "activate", 5, 0))
+	ds_map_add(global.library, "test_charges", new SkillBase("test_charges", "charges", 3, 5))
+	ds_map_add(global.library, "test_toggle", new SkillBase("test_toggle", "toggle", 0, 0))
 	
 	global.skills = ds_map_create()
 	ds_map_add(global.skills, "autoAttack", new SkillSlot())
@@ -15,6 +17,8 @@ function scr_init_variables(){
 	
 	scr_skill_insert("classic_auto_attack", "autoAttack")
 	scr_skill_insert("classic_auto_attack", "player1")
+	scr_skill_insert("test_charges", "player2")
+	scr_skill_insert("test_toggle", "wild1")
 	
 	global.player = {
 		hp: 100,

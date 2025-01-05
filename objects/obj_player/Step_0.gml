@@ -3,13 +3,12 @@ scr_player_get_input()
 scr_player_cooldown_ticker()
 
 if scr_player_get_variable("skill-autoAttack-timer", true) >= scr_player_get_variable("skill-autoAttack-cooldown", true) {
-	global.skills[? "autoAttack"].timer.current = 0
-	script_execute(global.skills[? "autoAttack"].skill.onActivate)
+	scr_skill_trigger("autoAttack")
 }
 
-if global.skills[? "player1"].skill != -1 {
-	if (global.skills[? "player1"].skill.type == "activate") && buttonAbilityPlayer1Pressed && (scr_player_get_variable("skill-player1-timer", true) >= scr_player_get_variable("skill-player1-cooldown", true)) {
-		global.skills[? "player1"].timer.current = 0
-		script_execute(global.skills[? "player1"].skill.onActivate)
-	}
-}
+if buttonAbilityPlayer1Pressed { scr_skill_trigger("player1") }
+if buttonAbilityPlayer2Pressed { scr_skill_trigger("player2") }
+if buttonAbilityPlayer3Pressed { scr_skill_trigger("player3") }
+if buttonAbilityWild1Pressed { scr_skill_trigger("wild1") }
+if buttonAbilityWild2Pressed { scr_skill_trigger("wild2") }
+if buttonAbilityWild3Pressed { scr_skill_trigger("wild3") }

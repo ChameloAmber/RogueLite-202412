@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"skl_template",
+  "%Name":"skl_test_toggle",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"skl_template",
+  "name":"skl_test_toggle",
   "parent":{
-    "name":"_TEMPLATE",
-    "path":"folders/Skills/_TEMPLATE.yy",
+    "name":"test_toggle",
+    "path":"folders/Skills/test_toggle.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

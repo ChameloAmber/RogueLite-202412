@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"skl_template",
+  "%Name":"scr_skill_trigger",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"skl_template",
+  "name":"scr_skill_trigger",
   "parent":{
-    "name":"_TEMPLATE",
-    "path":"folders/Skills/_TEMPLATE.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
