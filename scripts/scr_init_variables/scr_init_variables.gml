@@ -1,6 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_init_variables(){
+	game_set_speed(60, gamespeed_fps)
+	
 	global.library = ds_map_create()
 	ds_map_add(global.library, "classic_auto_attack", new SkillBase("classic_auto_attack", "activate", 5, 0))
 	ds_map_add(global.library, "test_charges", new SkillBase("test_charges", "charges", 3, 5))

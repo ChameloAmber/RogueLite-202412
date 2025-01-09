@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_skill_trigger",
+  "%Name":"scr_draw_skill_slot",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_skill_trigger",
+  "name":"scr_draw_skill_slot",
   "parent":{
-    "name":"Skill",
-    "path":"folders/Scripts/Skill.yy",
+    "name":"Util",
+    "path":"folders/Scripts/Util.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

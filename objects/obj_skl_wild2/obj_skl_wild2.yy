@@ -29,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_skill_slot_wild",
+    "path":"sprites/spr_skill_slot_wild/spr_skill_slot_wild.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

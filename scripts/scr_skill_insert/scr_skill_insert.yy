@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_skill_insert",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Skill",
+    "path":"folders/Scripts/Skill.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
