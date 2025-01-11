@@ -3,6 +3,7 @@
   "%Name":"obj_skl_wild2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_skl_wild2",
@@ -11,7 +12,10 @@
     "name":"Skill Slot",
     "path":"folders/Objects/Skill Slot.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_skl_template",
+    "path":"objects/obj_skl_template/obj_skl_template.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_skill_slot_wild",
-    "path":"sprites/spr_skill_slot_wild/spr_skill_slot_wild.yy",
+    "name":"spr_skill_slot_base",
+    "path":"sprites/spr_skill_slot_base/spr_skill_slot_base.yy",
   },
   "spriteMaskId":null,
   "visible":true,
