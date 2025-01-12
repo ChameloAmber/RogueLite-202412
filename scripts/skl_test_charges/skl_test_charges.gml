@@ -9,7 +9,8 @@ function skl_test_charges_on_fight_start(){
 }
 
 function skl_test_charges_activate(_slot){
-	global.skills[? _slot].charges--
+	global.damageCounter += global.skills[? _slot].charges * 3
+	global.skills[? _slot].charges = 0
 }
 
 function skl_test_charges_toggle_on(){

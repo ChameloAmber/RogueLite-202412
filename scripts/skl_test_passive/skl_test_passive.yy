@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"skl_test_passive",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"skl_test_passive",
+  "parent":{
+    "name":"test_passive",
+    "path":"folders/Skills/test_passive.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

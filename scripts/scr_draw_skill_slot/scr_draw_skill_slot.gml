@@ -15,9 +15,11 @@ function scr_draw_skill_slot(_slot){
 		textButtonY		: 4,
 		textChargeX		: 92,
 		textChargeY		: 74,
-		barXstart		: 4,
-		barYstart		: 84,
-		barLength		: 72,
+		chargeX			: 60,
+		chargeY			: 70,
+		barX			: 4,
+		barY			: 106,
+		barLength		: 92,
 		barHeight		: 12,
 	}
 
@@ -73,7 +75,11 @@ function scr_draw_skill_slot(_slot){
 				_textType = "Charge"
 				_hasCharge = true
 				_textCharge = global.skills[? _slot].charges
-				_drawBarType = "cooldown"
+				if global.skills[? _slot].charges >= global.skills[? _slot].skill.chargesMax {
+					_drawBarType = "cooldown-full"
+				} else {
+					_drawBarType = "cooldown"
+				}
 				break
 		}
 	} else {
@@ -105,10 +111,10 @@ function scr_draw_skill_slot(_slot){
 	if _hasCharge {
 		switch _tagType {
 			case "player":
-				draw_sprite(spr_skill_slot_player_charge, 0, x+60, y+70)
+				draw_sprite(spr_skill_slot_player_charge, 0, x+_config.chargeX, y+_config.chargeY)
 				break
 			case "wild":
-				draw_sprite(spr_skill_slot_wild_charge, 0, x+60, y+70)
+				draw_sprite(spr_skill_slot_wild_charge, 0, x+_config.chargeX, y+_config.chargeY)
 				break
 		}
 		
@@ -118,28 +124,30 @@ function scr_draw_skill_slot(_slot){
 	
 	draw_set_halign(fa_left)
 	
-	draw_sprite(spr_skill_slot_cooldown_base, 0, x, y+108)
+	// Draw Base Cooldown Bar
+	draw_sprite(spr_skill_slot_cooldown_base, 0, x+_config.barX, y+_config.barY)
 	
-	/*switch _drawBarType {
+	switch _drawBarType {
 		case "none":
-			draw_rectangle_color(self.x+_config.barXstart, self.y+_config.barYstart, self.x+(_config.barXstart+_config.barLength), self.y+(_config.barYstart+_config.barHeight), c_black, c_black, c_black, c_black, false)
 			break
 		case "cooldown":
-			draw_rectangle_color(self.x+_config.barXstart, self.y+_config.barYstart, self.x+(_config.barXstart+_config.barLength), self.y+(_config.barYstart+_config.barHeight), c_red, c_red, c_red, c_red, false)
-			draw_rectangle_color(self.x+_config.barXstart, self.y+_config.barYstart, self.x+_config.barXstart+((scr_player_get_variable(string("skill-{0}-timer", _slot), true, true)/scr_player_get_variable(string("skill-{0}-cooldown", _slot), true, true))*_config.barLength), self.y+(_config.barYstart+_config.barHeight), c_green, c_green, c_green, c_green, false)
+			draw_sprite_part(spr_skill_slot_cooldown_cooldown, 0, 0, 0, ((scr_player_get_variable(string("skill-{0}-timer", _slot), true, true)/scr_player_get_variable(string("skill-{0}-cooldown", _slot), true, true))*_config.barLength),_config.barHeight, x+_config.barX, y+_config.barY)
+			break
+		case "cooldown-full":
+			draw_sprite(spr_skill_slot_cooldown_cooldown, 0, x+_config.barX, y+_config.barY)
 			break
 		case "toggle":
 			if global.skills[? _slot].toggle {
-				draw_rectangle_color(self.x+_config.barXstart, self.y+_config.barYstart, self.x+(_config.barXstart+_config.barLength), self.y+(_config.barYstart+_config.barHeight), c_blue, c_blue, c_blue, c_blue, false)
+				draw_sprite(spr_skill_slot_cooldown_toggle_on, 0, x+_config.barX, y+_config.barY)
 			} else {
-				draw_rectangle_color(self.x+_config.barXstart, self.y+_config.barYstart, self.x+(_config.barXstart+_config.barLength), self.y+(_config.barYstart+_config.barHeight), c_orange, c_orange, c_orange, c_orange, false)
+				draw_sprite(spr_skill_slot_cooldown_toggle_off, 0, x+_config.barX, y+_config.barY)
 			}
 			break
 		case "passive":
-			draw_rectangle_color(self.x+_config.barXstart, self.y+_config.barYstart, self.x+(_config.barXstart+_config.barLength), self.y+(_config.barYstart+_config.barHeight), c_aqua, c_aqua, c_aqua, c_aqua, false)
+			draw_sprite(spr_skill_slot_cooldown_passive, 0, x+_config.barX, y+_config.barY)
 			break
 		case "disabled":
-			draw_rectangle_color(self.x+_config.barXstart, self.y+_config.barYstart, self.x+(_config.barXstart+_config.barLength), self.y+(_config.barYstart+_config.barHeight), c_silver, c_silver, c_silver, c_silver, false)
+			draw_sprite(spr_skill_slot_cooldown_disabled, 0, x+_config.barX, y+_config.barY)
 			break
-	}*/
+	}
 }

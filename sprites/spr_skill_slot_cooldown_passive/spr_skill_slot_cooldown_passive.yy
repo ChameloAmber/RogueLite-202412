@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_skill_slot_cooldown_base",
+  "%Name":"spr_skill_slot_cooldown_passive",
   "bboxMode":0,
   "bbox_bottom":11,
   "bbox_left":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0ba6709d-7837-4a02-bfba-81d37fe22ad3","name":"0ba6709d-7837-4a02-bfba-81d37fe22ad3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"c9e12e11-2397-482a-9f2b-27b9b0b62596","name":"c9e12e11-2397-482a-9f2b-27b9b0b62596","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":12,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"80cac1db-0925-49c5-a1df-5ad8a9a4aa48","blendMode":0,"displayName":"default","isLocked":false,"name":"80cac1db-0925-49c5-a1df-5ad8a9a4aa48","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"27deca70-0429-4625-a9a5-8093dcb8e9af","blendMode":0,"displayName":"default","isLocked":false,"name":"27deca70-0429-4625-a9a5-8093dcb8e9af","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_skill_slot_cooldown_base",
+  "name":"spr_skill_slot_cooldown_passive",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_skill_slot_cooldown_base",
+    "%Name":"spr_skill_slot_cooldown_passive",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_skill_slot_cooldown_base",
+    "name":"spr_skill_slot_cooldown_passive",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0ba6709d-7837-4a02-bfba-81d37fe22ad3","path":"sprites/spr_skill_slot_cooldown_base/spr_skill_slot_cooldown_base.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d0607f54-60f3-434d-986e-435a3d2c33e2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c9e12e11-2397-482a-9f2b-27b9b0b62596","path":"sprites/spr_skill_slot_cooldown_passive/spr_skill_slot_cooldown_passive.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"b10358f6-b032-4843-91b7-f7633db44989","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SkillBase(_codeName, _type, _cooldown, _chargesMax) constructor{
 	codeName = _codeName
-	type = _type
+	type = _type // activate, passive, toggle, charges
 	cooldown = _cooldown
 	chargesMax = _chargesMax
 	onAcquired = asset_get_index(string("skl_{0}_on_acquire", _codeName))

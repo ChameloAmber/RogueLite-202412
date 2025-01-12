@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_skill_remove",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_skill_remove",
+  "parent":{
+    "name":"Skill",
+    "path":"folders/Scripts/Skill.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
