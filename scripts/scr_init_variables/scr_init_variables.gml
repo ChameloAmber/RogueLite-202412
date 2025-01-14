@@ -2,9 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_init_variables(){
 	game_set_speed(60, gamespeed_fps)
+	draw_set_font(fnt_default)
 	
 	global.library = ds_map_create()
-	ds_map_add(global.library, "classic_auto_attack", new SkillBase("classic_auto_attack", "activate", 5, 0))
+	ds_map_add(global.library, "classic_auto_attack", new SkillBase("classic_auto_attack", "activate", 5, 0, spr_skl_classic_auto_attack))
 	ds_map_add(global.library, "test_charges", new SkillBase("test_charges", "charges", 3, 12))
 	ds_map_add(global.library, "test_toggle", new SkillBase("test_toggle", "toggle", 0, 0))
 	ds_map_add(global.library, "test_passive", new SkillBase("test_passive", "passive", 0, 0))

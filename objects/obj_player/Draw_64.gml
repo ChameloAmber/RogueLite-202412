@@ -1,8 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-/*draw_text(100, 430, string("Attack: {0}", (global.player.stat.attack + global.player.modifier.attack) * global.player.multiplier.attack))
-draw_text(100, 450, string("Timer: {0} / {1}", string_format(global.player.current.timerA, 1, 1), string_format(global.player.base.timerA, 1, 1)))
-draw_text(100, 470, string("Q: {0} / {1}", string_format(global.player.current.timerQ, 1, 1), string_format(global.player.base.timerQ, 1, 1)))
-draw_text(100, 490, string("W: {0} / {1}", string_format(global.player.current.timerW, 1, 1), string_format(global.player.base.timerW, 1, 1)))
-draw_text(100, 510, string("E: {0} / {1}", string_format(global.player.current.timerE, 1, 1), string_format(global.player.base.timerE, 1, 1)))
-draw_text(100, 530, string("R: {0} / {1}", string_format(global.player.current.timerR, 1, 1), string_format(global.player.base.timerR, 1, 1)))*/
+draw_text(40, 460, string("Player"))
+draw_text(40, 480, string("Health: {0}/{1}", scr_player_get_variable("player-health-current"), scr_player_get_variable("player-health-max")))
+draw_text(40, 500, string("Attack: {0}", scr_player_get_variable("player-attack")))
+draw_text(40, 520, string("Defense: {0}", scr_player_get_variable("player-defense")))
+draw_text(40, 540, string("Dodge: {0}", scr_player_get_variable("player-dodge")))

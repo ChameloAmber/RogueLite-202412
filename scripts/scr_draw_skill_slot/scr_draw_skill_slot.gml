@@ -11,12 +11,12 @@ function scr_draw_skill_slot(_slot){
 	var _config = {
 		textTypeX		: 0,
 		textTypeY		: -22,
-		textButtonX		: 26,
+		textButtonX		: 50,
 		textButtonY		: 4,
 		textChargeX		: 92,
-		textChargeY		: 74,
-		chargeX			: 60,
-		chargeY			: 70,
+		textChargeY		: 78,
+		chargeX			: 40,
+		chargeY			: 75,
 		barX			: 4,
 		barY			: 106,
 		barLength		: 92,
@@ -86,7 +86,7 @@ function scr_draw_skill_slot(_slot){
 		_textType = "-"
 	}
 	
-	if global.skills[? "player1"].disabled > 0 {
+	if global.skills[? _slot].disabled > 0 {
 		_drawBarType = "disabled"
 	}
 	
@@ -106,6 +106,11 @@ function scr_draw_skill_slot(_slot){
 	// Draw Button
 	draw_set_halign(fa_center)
 	draw_text(x+_config.textButtonX, y+_config.textButtonY, _textButton)
+	
+	// Draw Skill Sprite
+	if global.skills[? _slot].skill != -1 {
+		draw_sprite(global.skills[? _slot].skill.displaySprite, 0, x+20, y+30)
+	}
 	
 	// Draw Charge Tag + Charge Count
 	if _hasCharge {

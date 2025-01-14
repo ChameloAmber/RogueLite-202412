@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_skill_slot_wild_charge",
   "bboxMode":0,
-  "bbox_bottom":29,
+  "bbox_bottom":24,
   "bbox_left":0,
-  "bbox_right":39,
+  "bbox_right":59,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d90152bb-f580-4ad8-9358-c7f191f1bf94","name":"d90152bb-f580-4ad8-9358-c7f191f1bf94","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"463f29c3-ca4b-4e81-a567-fe31e58c465e","name":"463f29c3-ca4b-4e81-a567-fe31e58c465e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":30,
+  "height":25,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"9b1634ca-b9b2-4ee1-9fdf-1b5b1f2a4b65","blendMode":0,"displayName":"default","isLocked":false,"name":"9b1634ca-b9b2-4ee1-9fdf-1b5b1f2a4b65","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"0bff8c68-389c-4e1c-94c9-864aac13dcc0","blendMode":0,"displayName":"default","isLocked":false,"name":"0bff8c68-389c-4e1c-94c9-864aac13dcc0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_skill_slot_wild_charge",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d90152bb-f580-4ad8-9358-c7f191f1bf94","path":"sprites/spr_skill_slot_wild_charge/spr_skill_slot_wild_charge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e93a7019-7009-404e-a435-d79b3ba485b2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"463f29c3-ca4b-4e81-a567-fe31e58c465e","path":"sprites/spr_skill_slot_wild_charge/spr_skill_slot_wild_charge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c72faaca-a164-405a-8902-0308f2391074","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":40,
+  "width":60,
 }

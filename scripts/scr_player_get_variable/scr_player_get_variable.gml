@@ -3,6 +3,13 @@
 function scr_player_get_variable(_var, _real = false, _precise = false){
 	/* 
 		List of variables that can be queried
+		PLAYER
+		- player-health-current
+		- player-health-max
+		- player-attack
+		- player-defense
+		- player-dodge
+		
 		SKILL
 		- skill-autoAttack-timer
 		- skill-player1-timer
@@ -24,6 +31,26 @@ function scr_player_get_variable(_var, _real = false, _precise = false){
 	var _digit = 1
 	var _precision = 1
 	switch _var {
+		case "player-health-current":
+			_precision = 0
+			_value = global.variable.hp
+			break
+		case "player-health-max":
+			_precision = 0
+			_value = (global.base.hp * global.multiplier.hp) + global.modifier.hp
+			break
+		case "player-attack":
+			_precision = 0
+			_value = (global.base.attack * global.multiplier.attack) + global.modifier.attack
+			break
+		case "player-defense":
+			_precision = 0
+			_value = (global.base.defense * global.multiplier.defense) + global.modifier.defense
+			break
+		case "player-dodge":
+			_precision = 2
+			_value = (global.base.dodge * global.multiplier.dodge) + global.modifier.dodge
+			break
 		case "skill-autoAttack-timer":
 			_value = global.skills[? "autoAttack"].timer.current
 			break
