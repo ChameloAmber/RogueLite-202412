@@ -24,6 +24,12 @@ function scr_skill_insert(_codeName, _slot){
 	// SET TOGGLE OFF
 	global.skills[? _slot].toggle = false
 	
+	// RESET VARIABLES
+	global.skills[? _slot].variables[0] = 0
+	global.skills[? _slot].variables[1] = 0
+	global.skills[? _slot].variables[2] = 0
+	global.skills[? _slot].variables[3] = 0
+	
 	// TRIGGER ONACQUIRED
 	script_execute(global.skills[? _slot].skill.onAcquired, _slot)
 	

@@ -12,4 +12,5 @@ function SkillSlot() constructor{
 	toggle = false
 	charges = 0
 	disabled = 0.0
+	variables = [0, 0, 0, 0]
 }

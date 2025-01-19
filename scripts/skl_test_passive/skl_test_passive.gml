@@ -4,6 +4,10 @@ function skl_test_passive_on_acquire(_slot){
 	
 }
 
+function skl_test_passive_on_remove(_slot){
+	
+}
+
 function skl_test_passive_on_fight_start(_slot){
 	
 }
@@ -18,4 +22,8 @@ function skl_test_passive_toggle_on(_slot){
 
 function skl_test_passive_toggle_off(_slot){
 	
+}
+
+function skl_test_passive_on_charge_get(_slot){
+		
 }

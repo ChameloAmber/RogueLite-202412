@@ -28,6 +28,7 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"fnt_small","order":1,"path":"fonts/fnt_small/fnt_small.yy",},
     {"name":"obj_dumb_shit","order":4,"path":"objects/obj_dumb_shit/obj_dumb_shit.yy",},
     {"name":"obj_init","order":1,"path":"objects/obj_init/obj_init.yy",},
     {"name":"obj_player","order":2,"path":"objects/obj_player/obj_player.yy",},

@@ -12,11 +12,11 @@ function scr_draw_skill_slot(_slot){
 		textTypeX		: 0,
 		textTypeY		: -22,
 		textButtonX		: 50,
-		textButtonY		: 4,
+		textButtonY		: 3,
 		textChargeX		: 92,
-		textChargeY		: 78,
-		chargeX			: 40,
-		chargeY			: 75,
+		textChargeY		: 83,
+		chargeX			: 50,
+		chargeY			: 80,
 		barX			: 4,
 		barY			: 106,
 		barLength		: 92,
@@ -104,6 +104,7 @@ function scr_draw_skill_slot(_slot){
 	}
 	
 	// Draw Button
+	draw_set_font(fnt_small)
 	draw_set_halign(fa_center)
 	draw_text(x+_config.textButtonX, y+_config.textButtonY, _textButton)
 	
@@ -127,6 +128,7 @@ function scr_draw_skill_slot(_slot){
 		draw_text(x+_config.textChargeX, y+_config.textChargeY, _textCharge)
 	}
 	
+	draw_set_font(fnt_default)
 	draw_set_halign(fa_left)
 	
 	// Draw Base Cooldown Bar

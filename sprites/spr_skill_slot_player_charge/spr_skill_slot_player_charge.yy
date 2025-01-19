@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_skill_slot_player_charge",
   "bboxMode":0,
-  "bbox_bottom":24,
+  "bbox_bottom":19,
   "bbox_left":0,
-  "bbox_right":59,
+  "bbox_right":49,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"cb8689c9-2c70-40a3-b0ff-001d9a13cc30","name":"cb8689c9-2c70-40a3-b0ff-001d9a13cc30","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"adfd7ac8-4073-42bf-9681-918b1e640d1a","name":"adfd7ac8-4073-42bf-9681-918b1e640d1a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":25,
+  "height":20,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"a9e5dcbe-e06c-43c2-8220-bee4e51aa271","blendMode":0,"displayName":"default","isLocked":false,"name":"a9e5dcbe-e06c-43c2-8220-bee4e51aa271","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"6a395017-02ee-466e-b5c7-1cfd627fa4a6","blendMode":0,"displayName":"default","isLocked":false,"name":"6a395017-02ee-466e-b5c7-1cfd627fa4a6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_skill_slot_player_charge",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cb8689c9-2c70-40a3-b0ff-001d9a13cc30","path":"sprites/spr_skill_slot_player_charge/spr_skill_slot_player_charge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"81261342-133a-41a4-abb9-e792bd796514","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"adfd7ac8-4073-42bf-9681-918b1e640d1a","path":"sprites/spr_skill_slot_player_charge/spr_skill_slot_player_charge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"aecce2f3-0a01-40a3-b8c1-669154bb8f7f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":60,
+  "width":50,
 }

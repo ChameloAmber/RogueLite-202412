@@ -4,6 +4,10 @@ function skl_template_on_acquire(_slot){
 	
 }
 
+function skl_template_on_remove(_slot){
+	
+}
+
 function skl_template_on_fight_start(_slot){
 	
 }
@@ -18,4 +22,8 @@ function skl_template_toggle_on(_slot){
 
 function skl_template_toggle_off(_slot){
 	
+}
+
+function skl_template_on_charge_get(_slot){
+		
 }

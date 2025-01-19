@@ -5,10 +5,10 @@ function scr_init_variables(){
 	draw_set_font(fnt_default)
 	
 	global.library = ds_map_create()
-	ds_map_add(global.library, "classic_auto_attack", new SkillBase("classic_auto_attack", "activate", 5, 0, spr_skl_classic_auto_attack))
-	ds_map_add(global.library, "test_charges", new SkillBase("test_charges", "charges", 3, 12))
-	ds_map_add(global.library, "test_toggle", new SkillBase("test_toggle", "toggle", 0, 0))
-	ds_map_add(global.library, "test_passive", new SkillBase("test_passive", "passive", 0, 0))
+	ds_map_add(global.library, "classic_auto_attack", new SkillBase("classic_auto_attack", "auto", true, 5, false, 0, spr_skl_classic_auto_attack))
+	ds_map_add(global.library, "test_charges", new SkillBase("test_charges", "activate", true, 3, true, 12, spr_skl_template))
+	ds_map_add(global.library, "test_toggle", new SkillBase("test_toggle", "toggle", false, 0, false, 0, spr_skl_template))
+	ds_map_add(global.library, "test_passive", new SkillBase("test_passive", "passive", false, 0, false, 0, spr_skl_template))
 	
 	global.skills = ds_map_create()
 	ds_map_add(global.skills, "autoAttack", new SkillSlot())

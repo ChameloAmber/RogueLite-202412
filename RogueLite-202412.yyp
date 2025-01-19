@@ -49,6 +49,7 @@
   "name":"RogueLite-202412",
   "resources":[
     {"id":{"name":"fnt_default","path":"fonts/fnt_default/fnt_default.yy",},},
+    {"id":{"name":"fnt_small","path":"fonts/fnt_small/fnt_small.yy",},},
     {"id":{"name":"obj_debug","path":"objects/obj_debug/obj_debug.yy",},},
     {"id":{"name":"obj_dumb_shit","path":"objects/obj_dumb_shit/obj_dumb_shit.yy",},},
     {"id":{"name":"obj_init","path":"objects/obj_init/obj_init.yy",},},
