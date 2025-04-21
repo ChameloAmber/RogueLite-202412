@@ -3,14 +3,17 @@
 function SkillSlot() constructor{
 	skill = -1
 	level = 1
-	timer = {
+	toggle = false
+	charge = {
+		current: 0,
+		base: 0,
+	}
+	cost = {
 		current: 0,
 		base: 0,
 		modifier: 0,
 		multiplier: 1.0
 	}
-	toggle = false
-	charges = 0
-	disabled = 0.0
+	disabled = 0
 	variables = [0, 0, 0, 0]
 }

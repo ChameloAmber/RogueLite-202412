@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_init_variables",
+  "%Name":"skl_test_activate",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_init_variables",
+  "name":"skl_test_activate",
   "parent":{
-    "name":"Init",
-    "path":"folders/Scripts/Init.yy",
+    "name":"test_activate",
+    "path":"folders/Skills/test_activate.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

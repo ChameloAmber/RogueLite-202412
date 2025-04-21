@@ -17,11 +17,11 @@ function skl_test_toggle_activate(_slot){
 }
 
 function skl_test_toggle_toggle_on(_slot){
-	global.damageCounter++
+	//global.damageCounter++
 }
 
 function skl_test_toggle_toggle_off(_slot){
-	global.damageCounter++
+	//global.damageCounter++
 }
 
 function skl_test_toggle_on_charge_get(_slot){

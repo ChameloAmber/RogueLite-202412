@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_skill_trigger",
+  "%Name":"scr_skill_acquire",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_skill_trigger",
+  "name":"scr_skill_acquire",
   "parent":{
     "name":"Skill",
     "path":"folders/Scripts/Skill.yy",

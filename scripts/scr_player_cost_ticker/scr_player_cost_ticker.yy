@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_skill_insert",
+  "%Name":"scr_player_cost_ticker",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_skill_insert",
+  "name":"scr_player_cost_ticker",
   "parent":{
-    "name":"Skill",
-    "path":"folders/Scripts/Skill.yy",
+    "name":"Player",
+    "path":"folders/Scripts/Player.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

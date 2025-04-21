@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_skl_classic_auto_attack",
+  "%Name":"spr_skl_classic_basic_attack",
   "bboxMode":0,
   "bbox_bottom":58,
   "bbox_left":1,
@@ -21,19 +21,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"a470ab9b-774f-4f75-b73c-a3f5b637fd22","blendMode":0,"displayName":"default","isLocked":false,"name":"a470ab9b-774f-4f75-b73c-a3f5b637fd22","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_skl_classic_auto_attack",
+  "name":"spr_skl_classic_basic_attack",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"classic_auto_attack",
-    "path":"folders/Skills/classic_auto_attack.yy",
+    "name":"classic_basic_attack",
+    "path":"folders/Skills/classic_basic_attack.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
-    "%Name":"spr_skl_classic_auto_attack",
+    "$GMSequence":"v1",
+    "%Name":"spr_skl_classic_basic_attack",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_skl_classic_auto_attack",
+    "name":"spr_skl_classic_basic_attack",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,7 +69,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d706a693-d0a5-47c1-8e86-425c7ce740b5","path":"sprites/spr_skl_classic_auto_attack/spr_skl_classic_auto_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d706a693-d0a5-47c1-8e86-425c7ce740b5","path":"sprites/spr_skl_classic_basic_attack/spr_skl_classic_basic_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"d3dda803-c7f1-418e-a594-d6030b2689ea","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

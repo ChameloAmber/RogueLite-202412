@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"skl_classic_basic_attack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"skl_classic_basic_attack",
+  "parent":{
+    "name":"classic_basic_attack",
+    "path":"folders/Skills/classic_basic_attack.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

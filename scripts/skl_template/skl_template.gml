@@ -12,6 +12,10 @@ function skl_template_on_fight_start(_slot){
 	
 }
 
+function skl_template_on_wave_start(_slot){
+	
+}
+
 function skl_template_activate(_slot){
 	
 }

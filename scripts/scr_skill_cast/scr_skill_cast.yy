@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_player_cooldown_ticker",
+  "%Name":"scr_skill_cast",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_player_cooldown_ticker",
+  "name":"scr_skill_cast",
   "parent":{
-    "name":"Player",
-    "path":"folders/Scripts/Player.yy",
+    "name":"Skill",
+    "path":"folders/Scripts/Skill.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

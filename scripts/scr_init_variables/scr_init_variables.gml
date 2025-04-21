@@ -5,25 +5,27 @@ function scr_init_variables(){
 	draw_set_font(fnt_default)
 	
 	global.library = ds_map_create()
-	ds_map_add(global.library, "classic_auto_attack", new SkillBase("classic_auto_attack", "auto", true, 5, false, 0, spr_skl_classic_auto_attack))
-	ds_map_add(global.library, "test_charges", new SkillBase("test_charges", "activate", true, 3, true, 12, spr_skl_template))
-	ds_map_add(global.library, "test_toggle", new SkillBase("test_toggle", "toggle", false, 0, false, 0, spr_skl_template))
-	ds_map_add(global.library, "test_passive", new SkillBase("test_passive", "passive", false, 0, false, 0, spr_skl_template))
+	ds_map_add(global.library, "classic_basic_attack", new SkillBase("classic_basic_attack", "activate", 1, 1, spr_skl_classic_basic_attack))
+	ds_map_add(global.library, "test_activate", new SkillBase("test_activate", "activate", 50, 1, spr_skl_classic_basic_attack))
+	ds_map_add(global.library, "test_charges", new SkillBase("test_charges", "activate", 30, 10, spr_skl_classic_basic_attack))
+	ds_map_add(global.library, "test_toggle", new SkillBase("test_toggle", "toggle", 0, 0, spr_skl_template))
+	ds_map_add(global.library, "test_passive", new SkillBase("test_passive", "passive", 0, 0, spr_skl_template))
 	
 	global.skills = ds_map_create()
-	ds_map_add(global.skills, "autoAttack", new SkillSlot())
+	ds_map_add(global.skills, "basicAttack", new SkillSlot())
 	ds_map_add(global.skills, "player1", new SkillSlot())
 	ds_map_add(global.skills, "player2", new SkillSlot())
 	ds_map_add(global.skills, "player3", new SkillSlot())
+	ds_map_add(global.skills, "basicDefense", new SkillSlot())
 	ds_map_add(global.skills, "wild1", new SkillSlot())
 	ds_map_add(global.skills, "wild2", new SkillSlot())
 	ds_map_add(global.skills, "wild3", new SkillSlot())
 	
-	scr_skill_insert("classic_auto_attack", "autoAttack")
-	scr_skill_insert("classic_auto_attack", "player1")
-	scr_skill_insert("test_charges", "player2")
-	scr_skill_insert("test_toggle", "wild1")
-	scr_skill_insert("test_passive", "wild2")
+	scr_skill_acquire("basicAttack", "classic_basic_attack")
+	scr_skill_acquire("player2", "test_activate")
+	scr_skill_acquire("player3", "test_charges")
+	scr_skill_acquire("wild1", "test_toggle")
+	scr_skill_acquire("wild3", "test_passive")
 	
 	global.player = {
 		hp: 100,

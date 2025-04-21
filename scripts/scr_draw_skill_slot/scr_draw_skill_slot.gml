@@ -1,20 +1,20 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_draw_skill_slot(_slot){
-	var _textType = ""
-	var _tagType = ""
-	var _textButton = ""
-	var _hasCharge = false
-	var _textCharge = ""
-	var _drawBarType = "none"
+	var tagType = ""
+	var textButton = ""
+	var displayBar = false
+	var barType = ""
+	var displayCharge = false
+	var textCharge = ""
 	
-	var _config = {
-		textTypeX		: 0,
-		textTypeY		: -22,
+	var config = {
 		textButtonX		: 50,
 		textButtonY		: 3,
 		textChargeX		: 92,
 		textChargeY		: 83,
+		spriteX			: 20,
+		spriteY			: 30,
 		chargeX			: 50,
 		chargeY			: 80,
 		barX			: 4,
@@ -23,34 +23,39 @@ function scr_draw_skill_slot(_slot){
 		barHeight		: 12,
 	}
 
+	// Determine skill color and text
 	switch _slot {
-		case "autoAttack":
-			_tagType = "player"
-			_textButton = "AUTO"
+		case "basicAttack":
+			tagType = "player"
+			textButton = "Q"
 			break
 		case "player1":
-			_tagType = "player"
-			_textButton = "Q"
+			tagType = "player"
+			textButton = "W"
 			break
 		case "player2":
-			_tagType = "player"
-			_textButton = "W"
+			tagType = "player"
+			textButton = "E"
 			break
 		case "player3":
-			_tagType = "player"
-			_textButton = "E"
+			tagType = "player"
+			textButton = "R"
+			break
+		case "basicDefense":
+			tagType = "wild"
+			textButton = "A"
 			break
 		case "wild1":
-			_tagType = "wild"
-			_textButton = "A"
+			tagType = "wild"
+			textButton = "S"
 			break
 		case "wild2":
-			_tagType = "wild"
-			_textButton = "S"
+			tagType = "wild"
+			textButton = "D"
 			break
 		case "wild3":
-			_tagType = "wild"
-			_textButton = "D"
+			tagType = "wild"
+			textButton = "F"
 			break
 		default:
 			// Not a slot
@@ -58,43 +63,27 @@ function scr_draw_skill_slot(_slot){
 	}
 
 	if global.skills[? _slot].skill != -1 {
+		// Determine if bar should be displayed
 		switch global.skills[? _slot].skill.type {
-			case "passive":
-				_textType = "Passive"
-				_drawBarType = "passive"
+			case "activate":
+				displayBar = true
+				barType = "progress"
 				break
 			case "toggle":
-				_textType = "Toggle"
-				_drawBarType = "toggle"
-				break
-			case "activate":
-				_textType = "Active"
-				_drawBarType = "cooldown"
-				break
-			case "charges":
-				_textType = "Charge"
-				_hasCharge = true
-				_textCharge = global.skills[? _slot].charges
-				if global.skills[? _slot].charges >= global.skills[? _slot].skill.chargesMax {
-					_drawBarType = "cooldown-full"
-				} else {
-					_drawBarType = "cooldown"
-				}
+				displayBar = true
+				barType = "toggle"
 				break
 		}
-	} else {
-		_textType = "-"
+		
+		// Determine if charge should be displayed
+		if global.skills[? _slot].charge.base >= 2 {
+			displayCharge = true
+			textCharge = global.skills[? _slot].charge.current
+		}
 	}
 	
-	if global.skills[? _slot].disabled > 0 {
-		_drawBarType = "disabled"
-	}
-	
-	// Draw Title
-	draw_text(x+_config.textTypeX, y+_config.textTypeY, _textType)
-	
-	// Draw Tag
-	switch _tagType {
+	// Draw tag
+	switch tagType {
 		case "player":
 			draw_sprite(spr_skill_slot_player_tag, 0, x, y)
 			break
@@ -103,58 +92,55 @@ function scr_draw_skill_slot(_slot){
 			break
 	}
 	
-	// Draw Button
+	// Draw button
 	draw_set_font(fnt_small)
 	draw_set_halign(fa_center)
-	draw_text(x+_config.textButtonX, y+_config.textButtonY, _textButton)
+	draw_text(x+config.textButtonX, y+config.textButtonY, textButton)
 	
-	// Draw Skill Sprite
+	// Draw skill sprite
 	if global.skills[? _slot].skill != -1 {
-		draw_sprite(global.skills[? _slot].skill.displaySprite, 0, x+20, y+30)
+		draw_sprite(global.skills[? _slot].skill.displaySprite, 0, x+config.spriteX, y+config.spriteY)
 	}
 	
-	// Draw Charge Tag + Charge Count
-	if _hasCharge {
-		switch _tagType {
+	// Draw charge tag + charge count
+	if displayCharge {
+		switch tagType {
 			case "player":
-				draw_sprite(spr_skill_slot_player_charge, 0, x+_config.chargeX, y+_config.chargeY)
+				draw_sprite(spr_skill_slot_player_charge, 0, x+config.chargeX, y+config.chargeY)
 				break
 			case "wild":
-				draw_sprite(spr_skill_slot_wild_charge, 0, x+_config.chargeX, y+_config.chargeY)
+				draw_sprite(spr_skill_slot_wild_charge, 0, x+config.chargeX, y+config.chargeY)
 				break
 		}
 		
 		draw_set_halign(fa_right)
-		draw_text(x+_config.textChargeX, y+_config.textChargeY, _textCharge)
+		draw_text(x+config.textChargeX, y+config.textChargeY, textCharge)
 	}
 	
 	draw_set_font(fnt_default)
 	draw_set_halign(fa_left)
 	
-	// Draw Base Cooldown Bar
-	draw_sprite(spr_skill_slot_cooldown_base, 0, x+_config.barX, y+_config.barY)
-	
-	switch _drawBarType {
-		case "none":
-			break
-		case "cooldown":
-			draw_sprite_part(spr_skill_slot_cooldown_cooldown, 0, 0, 0, ((scr_player_get_variable(string("skill-{0}-timer", _slot), true, true)/scr_player_get_variable(string("skill-{0}-cooldown", _slot), true, true))*_config.barLength),_config.barHeight, x+_config.barX, y+_config.barY)
-			break
-		case "cooldown-full":
-			draw_sprite(spr_skill_slot_cooldown_cooldown, 0, x+_config.barX, y+_config.barY)
-			break
-		case "toggle":
-			if global.skills[? _slot].toggle {
-				draw_sprite(spr_skill_slot_cooldown_toggle_on, 0, x+_config.barX, y+_config.barY)
-			} else {
-				draw_sprite(spr_skill_slot_cooldown_toggle_off, 0, x+_config.barX, y+_config.barY)
-			}
-			break
-		case "passive":
-			draw_sprite(spr_skill_slot_cooldown_passive, 0, x+_config.barX, y+_config.barY)
-			break
-		case "disabled":
-			draw_sprite(spr_skill_slot_cooldown_disabled, 0, x+_config.barX, y+_config.barY)
-			break
+	// Draw bar
+	if displayBar {
+		// Draw base cooldown bar
+		draw_sprite(spr_skill_slot_cooldown_base, 0, x+config.barX, y+config.barY)
+		
+		switch barType {
+			case "progress": 
+				ratio = clamp(global.skills[? _slot].cost.current / ((global.skills[? _slot].cost.base * global.skills[? _slot].cost.multiplier) + global.skills[? _slot].cost.modifier), 0, 1)
+				if global.skills[? _slot].charge.current >= global.skills[? _slot].charge.base || ratio == 1 {
+					draw_sprite(spr_skill_slot_cooldown_toggle_on, 0, x+config.barX, y+config.barY)
+				} else {
+					draw_sprite_part(spr_skill_slot_cooldown_cooldown, 0, 0, 0, ratio*config.barLength, config.barHeight, x+config.barX, y+config.barY)
+				}
+				break
+			case "toggle":
+				if global.skills[? _slot].toggle {
+					draw_sprite(spr_skill_slot_cooldown_toggle_off, 0, x+config.barX, y+config.barY)
+				} else {
+					draw_sprite(spr_skill_slot_cooldown_disabled, 0, x+config.barX, y+config.barY)
+				}
+				break
+		}
 	}
 }
